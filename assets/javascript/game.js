@@ -58,6 +58,7 @@ $("#crystalOneHTML").on("click", function() {
   }
   if(playerScore > goalScore){
     losses++;
+    alert("Get better");
     $($playerLosses).text(losses);
     newGame();
   }
@@ -76,6 +77,7 @@ $("#crystalTwoHTML").on("click", function() {
   }
   if(playerScore > goalScore){
     losses++;
+    alert("Get better");
     $($playerLosses).text(losses);
     newGame();
   }
@@ -94,6 +96,7 @@ $("#crystalThreeHTML").on("click", function() {
   }
   if(playerScore > goalScore){
     losses++;
+    alert("Get better");
     $($playerLosses).text(losses);
     newGame();
   }
@@ -112,6 +115,7 @@ $("#crystalFourHTML").on("click", function() {
   }
   if(playerScore > goalScore){
     losses++;
+    alert("Get better");
     $($playerLosses).text(losses);
     newGame();
   }
