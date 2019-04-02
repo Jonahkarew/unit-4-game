@@ -15,26 +15,106 @@ var crystalFour;
 //create function that randomly generates a goal score between 21 and 85, and display to page
 function newGame(){
   playerScore = 0;
-  goalScore = Math.floor(Math.random() * 100);
-  crystalOne = Math.floor(Math.random() * crystalValues.length + 1);
-  crystalTwo = Math.floor(Math.random() * crystalValues.length + 1);
-  crystalThree = Math.floor(Math.random() * crystalValues.length + 1);
-  crystalFour = Math.floor(Math.random() * crystalValues.length + 1);
-  console.log(goalScore);
-  console.log(crystalOne);
-  console.log(crystalTwo);
-  console.log(crystalThree);
-  console.log(crystalFour);
+  goalScore = Math.floor(Math.random() * 80 + 20);
+  // crystalOne =  Math.floor(Math.random() * crystalValues.length + 1);
+  // crystalTwo = Math.floor(Math.random() * crystalValues.length + 1);
+  // crystalThree = Math.floor(Math.random() * crystalValues.length + 1);
+  // crystalFour = Math.floor(Math.random() * crystalValues.length + 1);
+
+  for (var i = 0; i < crystalValues.length; i++) {
+    $("#crystalOneHTML").attr("dataCrystalValue", Math.floor(Math.random() * crystalValues.length + 1));
+  }
+  for (var i = 0; i < crystalValues.length; i++) {
+    $("#crystalTwoHTML").attr("dataCrystalValue", Math.floor(Math.random() * crystalValues.length + 1));
+  }
+  for (var i = 0; i < crystalValues.length; i++) {
+    $("#crystalThreeHTML").attr("dataCrystalValue", Math.floor(Math.random() * crystalValues.length + 1));
+  }
+  for (var i = 0; i < crystalValues.length; i++) {
+    $("#crystalFourHTML").attr("dataCrystalValue", Math.floor(Math.random() * crystalValues.length + 1));
+  }
+
+
   $($goalScore).text(goalScore);
   $($playerScore).text(playerScore);
+  $($playerWins).text(wins);
+  $($playerLosses).text(losses);
 }
 
 //create function that randomly assigns number from value array to crystals(setAttr)
 
 //add .on("click") to images, increase player score by that value
-$("# $crystalOne").on("click", function() {
-  playerScore += crystalOne;
-  console.log(playerScore);
+$("#crystalOneHTML").on("click", function() {
+  // crystalOne += playerScore;
+  var crystalValue = ($(this).attr("dataCrystalValue"));
+    crystalValue = parseInt(crystalValue);
+    playerScore+= crystalValue;
+  console.log(crystalValue);
+  $($playerScore).text(playerScore);
+  if(playerScore === goalScore) {
+    wins++;
+    $($playerWins).text(wins);
+    newGame();
+  }
+  if(playerScore > goalScore){
+    losses++;
+    $($playerLosses).text(losses);
+    newGame();
+  }
+});
+$("#crystalTwoHTML").on("click", function() {
+  // crystalOne += playerScore;
+  var crystalValue = ($(this).attr("dataCrystalValue"));
+    crystalValue = parseInt(crystalValue);
+    playerScore+= crystalValue;
+  console.log(crystalValue);
+  $($playerScore).text(playerScore);
+  if(playerScore === goalScore) {
+    wins++;
+    $($playerWins).text(wins);
+    newGame();
+  }
+  if(playerScore > goalScore){
+    losses++;
+    $($playerLosses).text(losses);
+    newGame();
+  }
+});
+$("#crystalThreeHTML").on("click", function() {
+  // crystalOne += playerScore;
+  var crystalValue = ($(this).attr("dataCrystalValue"));
+    crystalValue = parseInt(crystalValue);
+    playerScore+= crystalValue;
+  console.log(crystalValue);
+  $($playerScore).text(playerScore);
+  if(playerScore === goalScore) {
+    wins++;
+    $($playerWins).text(wins);
+    newGame();
+  }
+  if(playerScore > goalScore){
+    losses++;
+    $($playerLosses).text(losses);
+    newGame();
+  }
+});
+$("#crystalFourHTML").on("click", function() {
+  // crystalOne += playerScore;
+  var crystalValue = ($(this).attr("dataCrystalValue"));
+    crystalValue = parseInt(crystalValue);
+    playerScore+= crystalValue;
+  console.log(crystalValue);
+  $($playerScore).text(playerScore);
+  if(playerScore === goalScore) {
+    wins++;
+    $($playerWins).text(wins);
+    newGame();
+  }
+  if(playerScore > goalScore){
+    losses++;
+    $($playerLosses).text(losses);
+    newGame();
+  }
 });
 //if player score === goal score, add to wins value, begin new game
 
