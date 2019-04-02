@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>The Crystal Game</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-4 px-4">The Crystal Guess Game!</h1>
+    </div>
+    <div class="container jumbotron jumbotron-fluid">
+      <h2 class="px-4">Instructions</h2>
+      <h4 class="px-4"> Click the crystals to increase your score! Try to match the large target number! But watch out if you go
+        over, you'll lose!</h4>
+    </div>
+
+    <div class="container row">
+      <img src="assets/images/ilze-lucero-1321008-unsplash.jpg" alt="Photo by Ilze Lucero on Unsplash" class="col-md-6 crystalImage" id="$crystalOne" >
+      <img src="assets/images/ilze-lucero-1321008-unsplash.jpg" alt="Photo by Ilze Lucero on Unsplash" class="col-md-6 crystalImage">
+      <img src="assets/images/ilze-lucero-1321008-unsplash.jpg" alt="Photo by Ilze Lucero on Unsplash" class="col-md-6 crystalImage">
+      <img src="assets/images/ilze-lucero-1321008-unsplash.jpg" alt="Photo by Ilze Lucero on Unsplash" class="col-md-6 crystalImage">
+    </div>
+    <div class="container row">
+      <h2 class="col-md-12">Score to reach: <span id="$goalScore"> </span></h2>
+    </div>
+    <div class="container row">
+        <h3 class="col-md-12 border">Your current score: <span id="$playerScore"></span></h3>
+      </div>
+    <div class="container row">
+      
+      <h3 class="col-6 border">Player wins: <span></span></h3>
+      <h3 class="col-6 border">Player losses: <span></span></h3>
+      
+    </div>
+   
+
+
+
+
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
